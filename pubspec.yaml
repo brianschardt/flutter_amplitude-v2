@@ -1,11 +1,10 @@
-name: flutter_amplitude
+name: flutter_amplitude_v2
 description: Flutter pluging for Amplitude SDK
 version: 0.1.1
-author: Miguel Catalan<miguel.catalan@eval.ly>
-homepage: https://github.com/Evally/flutter_amplitude
+homepage: https://github.com/brianschardt/flutter_amplitude-v2
 
 environment:
-  sdk: ">=2.0.0-dev.58.0 <3.0.0"
+  sdk: ">=2.0.0 <3.0.0"
 
 dependencies:
   flutter:

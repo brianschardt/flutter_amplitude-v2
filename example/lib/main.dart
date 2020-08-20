@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_amplitude/flutter_amplitude.dart';
+import 'package:flutter_amplitude_v2/flutter_amplitude_v2.dart';
 
 void main() {
   runApp(new MyApp());
@@ -12,7 +12,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   initState() {
     super.initState();
@@ -20,12 +19,14 @@ class _MyAppState extends State<MyApp> {
   }
 
   init() async {
-
     FlutterAmplitude.init("your_apy_key", true);
-    FlutterAmplitude.addGeneralProperties({'generalParameterKey': 'generalParameterValue'});
+    FlutterAmplitude.addGeneralProperties(
+        {'generalParameterKey': 'generalParameterValue'});
     FlutterAmplitude.setUserId("info@sample.com");
-    FlutterAmplitude.setUserProperties({'userParameterKey': 'userParameterValue'});
-    FlutterAmplitude.logEvent("EVENT_KEY", {'eventParameterKey': 'eventParameterValue'});
+    FlutterAmplitude.setUserProperties(
+        {'userParameterKey': 'userParameterValue'});
+    FlutterAmplitude.logEvent(
+        "EVENT_KEY", {'eventParameterKey': 'eventParameterValue'});
 
     if (!mounted) return;
   }
